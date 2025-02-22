@@ -50,9 +50,7 @@ export default function featureFlagsContext(event: any) {
 export default defineNuxtConfig({
   modules: ['nuxt-feature-flags'],
   featureFlags: {
-    contextPath: '~/feature-flags.context',
-    flags: {
-      experimentalFeature: (context) => context.user?.isBetaTester
+    contextPath: '~/feature-flags.context'
     },
     defaultContext: {
       environment: process.env.NODE_ENV
